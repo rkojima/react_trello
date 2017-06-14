@@ -1,14 +1,13 @@
 import React from 'react';
 import CardList from './list';
 
-export default function Board() {
-    const lists = [];
-    for (let i = 0; i < 3; i ++) {
-        lists.push(<CardList />);
-    }
+export default function Board(props) {
+    const lists= props.lists.map(list => {
+        return <CardList title={list.title} cards={list.cards} />
+    });
     return (
         <div className='board'>
-            <p>This is the board</p>
+            <h1>{props.title}</h1>
             {lists}
         </div>
         )

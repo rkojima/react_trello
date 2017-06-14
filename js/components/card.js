@@ -1,10 +1,9 @@
 import React from 'react';
 
-export default function Card() {
-    const text = 'This is a card';
+export default function Card(props) {
     return (
         <div className='card'>
-            <div className='card-text'>{text}</div>
+            <div className='card-text'>{props.text}</div>
         </div>
         );
 }
