@@ -1,9 +1,10 @@
 import React from 'react';
 import CardList from './list';
+import ListContainer from './list-container';
 
 export default function Board(props) {
     const lists= props.lists.map(list => {
-        return <CardList title={list.title} cards={list.cards} />
+        return <ListContainer title={list.title} cards={list.cards} />
     });
     return (
         <div className='board'>
